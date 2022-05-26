@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {
   getGoals,
-  setGoals,
+  setGoal,
   updateGoal,
   deleteGoal,
 } = require("../controllers/goalController");
@@ -11,7 +11,7 @@ const {
 // router.post("/", setGoals);
 //use chaining
 
-router.route("/").get(getGoals).post(setGoals);
+router.route("/").get(getGoals).post(setGoal);
 router.route("/:id").put(updateGoal).delete(deleteGoal);
 
 module.exports = router;
